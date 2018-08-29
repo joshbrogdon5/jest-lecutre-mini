@@ -1,42 +1,23 @@
 const axios = require('axios');
 
 const logic = {
-  toggle(value) {
-    return !value;
+  toggle() {
+    // Build me!
   },
   getProducts() {
-    return axios.get('http://localhost:4000/products');
+    // Build me!
   },
-  addToCart(cart, product) {
-    const productToAdd = { ...product };
-    let newCart = [...cart];
-    productToAdd.qty = 1;
-    let match = false;
-    newCart = newCart.map(item => {
-      if (item.id === productToAdd.id) {
-        match = true;
-        item.qty += 1;
-      }
-      return item;
-    });
-    if (!match) newCart.push(productToAdd);
-    return newCart;
+  addToCart() {
+    // Build me!
   },
-  calculateSubTotal(product) {
-    return (product.qty * product.price).toFixed(2);
+  calculateSubTotal() {
+    // Build me!
   },
-  calculateTotal(cart) {
-    return cart.reduce((total, item) => total + item.qty * item.price, 0).toFixed(2);
+  calculateTotal() {
+    // Build me!
   },
   removeItem(cart, id) {
-    const modifiedCart = [...cart];
-    return modifiedCart
-      .map(item => {
-        const modifiedItem = { ...item };
-        if (modifiedItem.id === id) modifiedItem.qty -= 1;
-        return modifiedItem;
-      })
-      .filter(item => !(item.id === id && item.qty <= 0));
+    // Build me!
   },
 };
 

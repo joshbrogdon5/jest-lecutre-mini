@@ -20,27 +20,23 @@ class App extends Component {
   }
 
   componentDidMount() {
-    getProducts().then(res => {
-      this.setState({products: res.data})
-    })
+    //Build Logic for this
   }
 
   addToCart = (itemToAdd) => {
-    this.setState({cart: addToCart(this.state.cart, itemToAdd)}, () => this.calculateTotal(this.state.cart))
+    //Build Logic for this
   }
 
   showCart = () => {
-    this.setState({showCart: toggle(this.state.showCart)})
+    //Build Logic for this
   }
 
   calculateTotal(cart) {
-    this.setState({total: calculateTotal(cart)})
+    //Build Logic for this
   }
 
   removeItem = (id) => {
-    this.setState({
-      cart: removeItem(this.state.cart, id)
-    }, () => this.calculateTotal(this.state.cart))
+    //Build Logic for this
   }
 
   renderProducts(products) {
