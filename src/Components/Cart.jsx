@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FontAwesome from 'react-fontawesome';
+import { calculateSubTotal } from '../Logic/logic';
 
 class Cart extends Component {
   constructor() {
@@ -15,9 +16,9 @@ class Cart extends Component {
           <div>
             {item.qty}x {item.product}
           </div>
-          <div>${item.qty * item.price}</div>
+          <div>${calculateSubTotal(item)}</div>
         </h4>
-        <button>
+        <button onClick={() => this.props.removeItem(item.id)}>
           Remove item <FontAwesome name="trash" />
         </button>
       </div>
