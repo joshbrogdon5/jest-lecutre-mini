@@ -16,7 +16,7 @@ const logic = {
   calculateTotal() {
     // Build me!
   },
-  removeItem(cart, id) {
+  removeItem() {
     // Build me!
   },
 };
