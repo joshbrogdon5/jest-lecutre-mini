@@ -7,7 +7,15 @@ const product = {
   image: 'http://goodtogostore.com/product-package-images/192837494.jpg',
 };
 
-describe('Tests Toggle Show button', () => {});
+describe('Tests Toggle Show button', () => {
+  test('can toggle true to false', () => {
+    expect(toggle(true)).toBe(false)
+  })
+  test('can toggle false to true', () => {
+    expect(toggle(false)).toBe(true)
+  })
+
+});
 
 describe('Can Get products from Server', () => {});
 
